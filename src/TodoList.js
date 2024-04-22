@@ -33,7 +33,6 @@ function TodoList() {
 
           <li key={index}>
             {todo}
-
             <button onClick={() =>removeTodos(index)}>Remove</button>
 
           </li>

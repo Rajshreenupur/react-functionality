@@ -1,5 +1,6 @@
 import WeatherApp from "./WeatherApp";
 import TodoList from "./TodoList";
+import Quiz from "./Quiz";
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
      <TodoList/>
      <WeatherApp/>
+     <Quiz/>
     </div>
   );
 }
