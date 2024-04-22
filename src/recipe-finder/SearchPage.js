@@ -10,7 +10,7 @@ const SearchPage = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.post('/api/recipes/search', { query });
+      const response = await axios.post('http://localhost:5000/api/recipes/search', { query });
       setRecipes(response.data);
     } catch (error) {
       console.error(error);

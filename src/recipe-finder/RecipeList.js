@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const RecipeList = ({ recipes }) => {
@@ -10,11 +9,15 @@ const RecipeList = ({ recipes }) => {
           <li key={index}>
             <img src={recipe.image} alt={recipe.title} />
             <h3>{recipe.title}</h3>
-            <p>Ingredients: {recipe.ingredients.join(', ')}</p>
+            <p>Ingredients: {recipe.ingredients ? recipe.ingredients.join(', ') : 'N/A'}</p>
             <ol>
-              {recipe.instructions.map((instruction, idx) => (
-                <li key={idx}>{instruction}</li>
-              ))}
+              {recipe.instructions && recipe.instructions.length > 0 ? (
+                recipe.instructions.map((instruction, idx) => (
+                  <li key={idx}>{instruction}</li>
+                ))
+              ) : (
+                <li>No instructions available</li>
+              )}
             </ol>
           </li>
         ))}
